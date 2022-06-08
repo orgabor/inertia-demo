@@ -40,7 +40,6 @@ __webpack_require__.r(__webpack_exports__);
     });
     var search = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(props.filters.search);
     (0,vue__WEBPACK_IMPORTED_MODULE_0__.watch)(search, lodash_throttle__WEBPACK_IMPORTED_MODULE_2___default()(function (value) {
-      console.log('triggered');
       _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__.Inertia.get('/users', {
         search: value
       }, {
@@ -122,16 +121,10 @@ var _hoisted_12 = {
 var _hoisted_13 = {
   "class": "text-sm font-medium text-gray-900"
 };
-
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
+var _hoisted_14 = {
   "class": "px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "#",
-  "class": "text-indigo-600 hover:text-indigo-900"
-}, " Edit")], -1
-/* HOISTED */
-);
-
+};
+var _hoisted_15 = ["href"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
 
@@ -164,11 +157,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       key: user.id
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(user.name), 1
     /* TEXT */
-    )])])]), _hoisted_14]);
+    )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      href: user.links.profile_path,
+      "class": "text-indigo-600 hover:text-indigo-900"
+    }, " Edit", 8
+    /* PROPS */
+    , _hoisted_15)])]);
   }), 128
   /* KEYED_FRAGMENT */
   ))])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Paginator "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Pagination"], {
-    links: $props.users.links,
+    links: $props.users.meta.links,
     "class": "mt-6"
   }, null, 8
   /* PROPS */

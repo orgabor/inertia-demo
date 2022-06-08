@@ -565,6 +565,14 @@ var map = {
 		"/js/vendor",
 		"resources_js_Pages_Users_Index_vue"
 	],
+	"./Users/Show": [
+		"./resources/js/Pages/Users/Show.vue",
+		"resources_js_Pages_Users_Show_vue"
+	],
+	"./Users/Show.vue": [
+		"./resources/js/Pages/Users/Show.vue",
+		"resources_js_Pages_Users_Show_vue"
+	],
 	"./Users_original": [
 		"./resources/js/Pages/Users_original.vue",
 		"resources_js_Pages_Users_original_vue"

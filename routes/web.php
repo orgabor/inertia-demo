@@ -31,6 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/', [UsersController::class, 'index']);
         Route::get('/create', [UsersController::class, 'create']);
         Route::post('/', [UsersController::class, 'store']);
+        Route::get('/{user:id}', [UsersController::class, 'show']);
     });
 
     Route::get('/settings', function () {
